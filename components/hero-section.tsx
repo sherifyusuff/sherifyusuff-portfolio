@@ -5,7 +5,7 @@ import { ArrowDown, Github, Linkedin, Twitter, Facebook } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
-const PROFILE_IMAGE = "/images/sherif-profile.png"
+const PROFILE_IMAGE = "/images/sherif.png"
 
 const socials = [
   { icon: Twitter, href: "#", label: "Twitter" },

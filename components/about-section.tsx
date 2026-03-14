@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import { Phone, Mail, MapPin, Calendar } from "lucide-react"
 import Image from "next/image"
 
-const PROFILE_IMAGE = "/images/sherif-profile.png"
+const PROFILE_IMAGE = "/images/sherif.png"
 
 const personalInfo = [
   { icon: Phone, label: "Phone", value: "+234 XXX XXX XXXX", color: "text-primary" },

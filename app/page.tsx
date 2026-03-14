@@ -178,7 +178,7 @@ const testimonials = [
   },
 ]
 
-const PROFILE_IMAGE = "/images/sherif-profile.png"
+const PROFILE_IMAGE = "/images/sherif.png"
 
 /* ------------------------------------------------------------------ */
 /*  MAIN PAGE                                                         */
