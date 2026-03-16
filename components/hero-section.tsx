@@ -74,6 +74,7 @@ export function HeroSection() {
                 src={PROFILE_IMAGE}
                 alt="Sherif Yusuff - Full Stack Developer"
                 fill
+                sizes="(max-width: 640px) 320px, 384px"
                 className="object-cover object-top"
                 priority
               />

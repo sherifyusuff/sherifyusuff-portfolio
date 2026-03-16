@@ -46,6 +46,7 @@ export function AboutSection() {
                   src={PROFILE_IMAGE}
                   alt="Sherif Yusuff"
                   fill
+                  sizes="(max-width: 640px) 288px, 320px"
                   className="object-cover object-top"
                 />
               </div>

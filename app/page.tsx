@@ -376,6 +376,7 @@ export default function Home() {
                     src={PROFILE_IMAGE}
                     alt="Sherif Yusuff"
                     fill
+                    sizes="(max-width: 640px) 320px, 384px"
                     className="object-cover object-top"
                     priority
                   />
@@ -408,6 +409,7 @@ export default function Home() {
                     alt="Sherif Yusuff"
                     fill
                     priority
+                    sizes="(max-width: 640px) 288px, 320px"
                     className="object-cover object-top"
                   />
                 </div>
