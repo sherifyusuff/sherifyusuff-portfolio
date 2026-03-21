@@ -11,7 +11,7 @@ const socials = [
   { icon: Twitter, href: "#", label: "Twitter" },
   { icon: Github, href: "#", label: "GitHub" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Facebook, href: "https://www.facebook.com/sherifyusufff", label: "Facebook" },
 ]
 
 export function HeroSection() {

@@ -334,7 +334,7 @@ export default function Home() {
                     { Icon: Github, href: "https://github.com/sherifyusuff", name: "github" },
                     { Icon: Twitter, href: "https://twitter.com/sherifyusuff", name: "twitter" },
                     { Icon: Linkedin, href: "https://linkedin.com/in/sherif-yusuff-381b1495", name: "linkedin" },
-                    { Icon: Facebook, href: "https://facebook.com/sherifyusuff", name: "facebook" },
+                    { Icon: Facebook, href: "https://www.facebook.com/sherifyusufff", name: "facebook" },
                     { Icon: MessageCircle, href: "https://wa.me/2347035321179", name: "whatsapp" },
                   ].map(({ Icon, href, name }) => (
                     <a
@@ -738,7 +738,7 @@ export default function Home() {
                     { Icon: Github, href: "https://github.com/sherifyusuff", name: "github" },
                     { Icon: Linkedin, href: "https://linkedin.com/in/sherif-yusuff-381b1495", name: "linkedin" },
                     { Icon: Twitter, href: "https://twitter.com/sherifyusuff", name: "twitter" },
-                    { Icon: Facebook, href: "https://facebook.com/sherifyusuff", name: "facebook" },
+                    { Icon: Facebook, href: "https://www.facebook.com/sherifyusufff", name: "facebook" },
                     { Icon: MessageCircle, href: "https://wa.me/2347035321179", name: "whatsapp" },
                   ].map(({ Icon, href, name }) => (
                     <a
@@ -771,7 +771,7 @@ export default function Home() {
               { Icon: Github, href: "https://github.com/sherifyusuff", name: "github" },
               { Icon: Linkedin, href: "https://linkedin.com/in/sherif-yusuff-381b1495", name: "linkedin" },
               { Icon: Twitter, href: "https://twitter.com/sherifyusuff", name: "twitter" },
-              { Icon: Facebook, href: "https://facebook.com/sherifyusuff", name: "facebook" },
+              { Icon: Facebook, href: "https://www.facebook.com/sherifyusufff", name: "facebook" },
               { Icon: MessageCircle, href: "https://wa.me/2347035321179", name: "whatsapp" },
             ].map(({ Icon, href, name }) => (
               <a
