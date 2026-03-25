@@ -8,36 +8,60 @@ import Image from "next/image"
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "A full-featured e-commerce platform with real-time inventory, payment integration, and admin dashboard built for a retail client.",
-    image: "/images/project-ecommerce.jpg",
-    tech: ["Next.js", "Node.js", "MongoDB", "Stripe"],
-    demo: "#",
-    github: "#",
+    title: "Tasty Hub Restaurant Website",
+    description: "Restaurant website for Tasty Hub with a bold hero layout, menu-focused presentation, and conversion-friendly ordering touchpoints for food lovers.",
+    image: "/images/project-tastyhub.png",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Responsive Design"],
+    demo: "https://tastyhub-theta.vercel.app/",
+    github: "https://github.com/sherifyusuff/tastyhub",
   },
   {
-    title: "WordPress Business Suite",
-    description: "Custom WordPress theme and plugin suite for a corporate client, featuring advanced ACF layouts, WooCommerce integration, and multilingual support.",
-    image: "/images/project-wordpress.jpg",
-    tech: ["WordPress", "PHP", "MySQL", "WooCommerce"],
-    demo: "#",
-    github: "#",
+    title: "Aurum Salon & Spa",
+    description: "Premium salon and spa website designed with a polished dark aesthetic, service discovery flow, and booking-driven user journey for a luxury brand.",
+    image: "/images/project-aurum.png",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "UI Design"],
+    demo: "https://aurumm-five.vercel.app/",
+    github: "https://github.com/sherifyusuff/aurum",
   },
   {
-    title: "SaaS Dashboard",
-    description: "Real-time analytics dashboard with role-based access control, data visualization, and automated reporting for a SaaS startup.",
-    image: "/images/project-dashboard.jpg",
-    tech: ["React", "Express", "PostgreSQL", "Chart.js"],
-    demo: "#",
-    github: "#",
+    title: "Heritage Fit Fashion Brand",
+    description: "Elegant fashion brand website featuring editorial-style visuals, clear product storytelling, and a modern responsive layout tailored to premium apparel.",
+    image: "/images/project-heritage-fit.png",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "Brand Website"],
+    demo: "https://v0-heritagefit.vercel.app/",
+    github: "https://github.com/sapwebs2025/v0-heritage-fit-website",
   },
   {
-    title: "Portfolio & Blog CMS",
-    description: "A headless CMS-powered portfolio and blog platform with MDX support, dynamic OG images, and blazing-fast performance.",
-    image: "/images/project-blog.jpg",
-    tech: ["Next.js", "Tailwind", "Sanity", "Vercel"],
-    demo: "#",
-    github: "#",
+    title: "Luxe Ecommerce Platform",
+    description: "Luxury ecommerce storefront with polished product cards, category filtering, cart flows, and a refined responsive shopping experience.",
+    image: "/images/project-ecommerce-new.webp",
+    tech: ["Vite", "React", "TypeScript", "Tailwind CSS"],
+    demo: "https://luxe-ecommerce-store-sigma.vercel.app/",
+    github: "https://github.com/sherifyusuff/luxe-ecommerce-store",
+  },
+  {
+    title: "Sapwebs Corporate Website",
+    description: "Corporate marketing website for Sapwebs featuring a polished hero section, clear service messaging, and a conversion-focused business layout.",
+    image: "/images/project-corporate.webp",
+    tech: ["Next.js", "Tailwind CSS", "TypeScript"],
+    demo: "https://v0-sapwebs-website-design.vercel.app/",
+    github: "https://github.com/sherifyusuff/sapwebs-corporate-website",
+  },
+  {
+    title: "SaaS Analytical Admin Dashboard",
+    description: "Admin dashboard experience with authentication, KPI-focused layouts, and a clean interface for teams tracking operational performance.",
+    image: "/images/project-dashboard.webp",
+    tech: ["Vite", "React", "TypeScript", "shadcn/ui"],
+    demo: "https://saas-admin-dashboard-pnnu.vercel.app",
+    github: "https://github.com/sherifyusuff/saas-admin-dashboard",
+  },
+  {
+    title: "Car Dealership Gallery Website",
+    description: "Luxury dealership website with a dynamic vehicle gallery, inventory browsing, service center highlights, and a strong editorial grid.",
+    image: "/images/project-cardealership.webp",
+    tech: ["Next.js", "Tailwind CSS", "TypeScript"],
+    demo: "https://v0-car-dealership-website-lac.vercel.app/",
+    github: "https://github.com/sherifyusuff/car-dealership-websites",
   },
 ]
 
@@ -98,12 +122,14 @@ export function ProjectsSection() {
                         Live Demo
                       </a>
                     </Button>
-                    <Button asChild variant="outline" size="sm" className="gap-1.5 rounded-full">
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-3.5 w-3.5" />
-                        Code
-                      </a>
-                    </Button>
+                    {"github" in project && project.github ? (
+                      <Button asChild variant="outline" size="sm" className="gap-1.5 rounded-full">
+                        <a href={project.github} target="_blank" rel="noopener noreferrer">
+                          <Github className="h-3.5 w-3.5" />
+                          Code
+                        </a>
+                      </Button>
+                    ) : null}
                   </div>
                 </div>
               </div>
