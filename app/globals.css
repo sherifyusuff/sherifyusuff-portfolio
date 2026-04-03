@@ -123,7 +123,28 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-sm text-foreground sm:text-[15px];
+    background-image:
+      radial-gradient(circle at 10% 12%, color-mix(in oklch, var(--primary) 10%, transparent) 0, transparent 48%),
+      radial-gradient(circle at 90% 85%, color-mix(in oklch, var(--accent) 12%, transparent) 0, transparent 44%);
+    background-attachment: fixed;
+  }
+  button,
+  a,
+  input,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid color-mix(in oklch, var(--primary) 65%, transparent);
+    outline-offset: 2px;
+  }
+  ::selection {
+    background: color-mix(in oklch, var(--primary) 26%, transparent);
+    color: var(--foreground);
   }
 }
 
@@ -138,8 +159,67 @@
   }
 }
 
+@keyframes floatGlow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .route-enter {
     animation: routeEnter 320ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+}
+
+@layer utilities {
+  .section-shell {
+    @apply px-4 py-10 sm:px-6 sm:py-16 lg:py-20;
+  }
+
+  .section-container {
+    @apply mx-auto max-w-6xl;
+  }
+
+  .section-eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-primary/90;
+  }
+
+  .section-title {
+    @apply text-[1.75rem] font-bold leading-tight text-balance text-foreground sm:text-3xl lg:text-4xl;
+  }
+
+  .section-lead {
+    @apply max-w-3xl text-[13px] leading-relaxed text-muted-foreground sm:text-base;
+  }
+
+  .interactive-card {
+    @apply transition-all duration-300 will-change-transform hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0) scale(0.995);
+    transition:
+      opacity 560ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 560ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .fade-up.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .route-enter,
+  .fade-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }
