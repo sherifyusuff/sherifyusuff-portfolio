@@ -189,7 +189,7 @@ export function ContactPageClient() {
           </p>
         </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div id="contact-form" className="grid scroll-mt-28 gap-6 md:grid-cols-2">
           <Reveal
             className="space-y-4 rounded-3xl border border-border bg-card p-5 shadow-sm sm:p-6"
             delay={40}

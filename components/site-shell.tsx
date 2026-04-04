@@ -20,7 +20,7 @@ function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-card/80 text-muted-foreground transition-all hover:border-primary/30 hover:text-primary"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/65 bg-white/75 text-muted-foreground shadow-[0_10px_30px_rgba(15,23,42,0.08)] transition-all hover:border-primary/30 hover:text-primary dark:border-border dark:bg-card/80"
       aria-label="Toggle theme"
     >
       {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
@@ -47,16 +47,24 @@ function SiteHeader() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "border-b border-border/80 bg-card/85 shadow-sm backdrop-blur-xl" : "bg-transparent"
+        scrolled
+          ? "border-b border-white/70 bg-background/82 shadow-[0_14px_45px_rgba(15,23,42,0.08)] backdrop-blur-2xl dark:border-border/80 dark:bg-card/85"
+          : "bg-transparent"
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-        <Link href="/" className="flex min-w-0 items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-xs font-bold text-primary-foreground">
+        <Link href="/" className="flex min-w-0 items-center gap-3">
+          <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[linear-gradient(145deg,color-mix(in_oklch,var(--primary)_90%,white_10%),color-mix(in_oklch,var(--accent)_75%,white_25%))] text-xs font-black tracking-[0.14em] text-white shadow-[0_14px_30px_rgba(9,99,202,0.28)]">
             SY
           </span>
-          <span className="truncate font-sans text-sm font-bold text-foreground sm:text-base">
-            Sherif<span className="text-primary">.</span>
+          <span className="flex min-w-0 flex-col leading-none">
+            <span className="truncate font-mono text-lg font-extrabold tracking-[-0.06em] text-foreground sm:text-xl">
+              <span className="text-foreground">Sherif</span>
+              <span className="align-top text-primary">.</span>
+            </span>
+            <span className="hidden text-[10px] font-semibold uppercase tracking-[0.32em] text-primary/80 sm:block">
+              Yusuff Digital Studio
+            </span>
           </span>
         </Link>
 
@@ -70,8 +78,8 @@ function SiteHeader() {
                 aria-current={active ? "page" : undefined}
                 className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition-all ${
                   active
-                    ? "bg-primary text-primary-foreground shadow-sm"
-                    : "text-muted-foreground hover:bg-primary/10 hover:text-primary"
+                    ? "bg-primary text-primary-foreground shadow-[0_12px_24px_rgba(9,99,202,0.22)]"
+                    : "text-muted-foreground hover:bg-white/75 hover:text-primary dark:hover:bg-primary/10"
                 }`}
               >
                 {link.label}
@@ -82,12 +90,12 @@ function SiteHeader() {
 
         <div className="flex items-center gap-2 sm:gap-3">
           <ThemeToggle />
-          <Link
+          <a
             href="/contact"
-            className="hidden h-9 items-center rounded-full bg-primary px-4 text-xs font-semibold text-primary-foreground transition-all hover:opacity-90 md:inline-flex"
+            className="hidden h-10 items-center rounded-full bg-primary px-5 text-xs font-semibold text-primary-foreground shadow-[0_14px_30px_rgba(9,99,202,0.24)] transition-all hover:-translate-y-0.5 hover:opacity-90 md:inline-flex"
           >
             Hire Me
-          </Link>
+          </a>
           <button
             className="flex h-8 w-8 items-center justify-center rounded-full border border-border bg-card/85 text-muted-foreground md:hidden"
             onClick={() => setMenuOpen((open) => !open)}
@@ -99,7 +107,7 @@ function SiteHeader() {
       </nav>
 
       {menuOpen && (
-        <div className="border-t border-border bg-card/95 px-4 pb-5 pt-2 backdrop-blur-lg md:hidden">
+        <div className="border-t border-white/60 bg-background/95 px-4 pb-5 pt-2 backdrop-blur-lg dark:border-border dark:bg-card/95 md:hidden">
           {navLinks.map((link) => {
             const active = pathname === link.href
             return (
@@ -115,12 +123,12 @@ function SiteHeader() {
               </Link>
             )
           })}
-          <Link
+          <a
             href="/contact"
             className="mt-4 flex h-9 items-center justify-center rounded-full bg-primary text-xs font-semibold text-primary-foreground"
           >
             Hire Me
-          </Link>
+          </a>
         </div>
       )}
     </header>

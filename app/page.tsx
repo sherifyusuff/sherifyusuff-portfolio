@@ -13,9 +13,9 @@ import {
 } from "@/lib/site-data"
 
 export const metadata: Metadata = {
-  title: "Sherif Yusuff | Full-Stack Developer",
+  title: "Sherif Yusuff | Full-Stack Developer | WordPress Specialist | Mobile App Developer",
   description:
-    "Portfolio homepage for Sherif Yusuff, a Full-Stack Developer and WordPress specialist building modern websites, dashboards, and ecommerce products.",
+    "Portfolio homepage for Sherif Yusuff, a Full-Stack Developer, WordPress Specialist, and Mobile App Developer building modern websites, apps, dashboards, and ecommerce products.",
 }
 
 export default function HomePage() {
@@ -23,20 +23,25 @@ export default function HomePage() {
     <main>
       <section className="relative overflow-hidden section-shell lg:py-16">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -left-24 top-0 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
-          <div className="absolute -bottom-20 right-0 h-56 w-56 rounded-full bg-accent/10 blur-3xl" />
+          <div className="absolute inset-x-0 top-0 h-[32rem] bg-[radial-gradient(circle_at_top_left,rgba(10,132,255,0.16),transparent_34%),radial-gradient(circle_at_78%_22%,rgba(34,197,94,0.12),transparent_24%),linear-gradient(180deg,rgba(255,255,255,0.72),rgba(255,255,255,0.32))] dark:bg-[radial-gradient(circle_at_top_left,rgba(10,132,255,0.18),transparent_34%),radial-gradient(circle_at_78%_22%,rgba(34,197,94,0.15),transparent_24%),linear-gradient(180deg,rgba(10,15,26,0.72),rgba(10,15,26,0.35))]" />
+          <div className="absolute -left-24 top-0 h-64 w-64 rounded-full bg-primary/12 blur-3xl" />
+          <div className="absolute -bottom-20 right-0 h-56 w-56 rounded-full bg-accent/12 blur-3xl" />
         </div>
 
-        <div className="section-container relative grid items-center gap-8 md:grid-cols-[1.1fr_0.9fr] md:gap-12">
-          <Reveal className="space-y-5" delay={30}>
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+        <div className="section-container relative grid items-center gap-10 md:grid-cols-[1.08fr_0.92fr] md:gap-12">
+          <Reveal className="space-y-6" delay={30}>
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/12 bg-white/75 px-4 py-2 text-xs font-semibold text-primary shadow-[0_14px_32px_rgba(15,23,42,0.06)] backdrop-blur dark:border-primary/20 dark:bg-card/75">
               <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
               Available for projects
             </span>
 
-            <p className="section-eyebrow">Full-Stack Developer - WordPress Specialist</p>
+            <div className="space-y-3">
+              <p className="w-fit rounded-full border border-primary/18 bg-primary/8 px-4 py-2 text-[0.7rem] font-bold uppercase tracking-[0.28em] text-primary/95 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)] dark:border-primary/20 dark:bg-primary/10">
+                Full-Stack Developer | WordPress Specialist | Mobile App Developer
+              </p>
+            </div>
 
-            <h1 className="max-w-3xl text-[2rem] font-bold leading-[1.02] text-balance text-primary sm:text-4xl lg:text-5xl">
+            <h1 className="max-w-3xl font-mono text-[2.2rem] font-bold leading-[1.02] tracking-[-0.05em] text-balance text-primary sm:text-4xl lg:text-5xl">
               High-performing digital products for ambitious brands.
             </h1>
 
@@ -46,16 +51,16 @@ export default function HomePage() {
               long-term structure.
             </p>
 
-            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
+            <div className="flex flex-col gap-2.5 sm:flex-row sm:flex-wrap">
               <Link
                 href="/projects"
-                className="inline-flex h-9 w-full items-center justify-center gap-2 rounded-full bg-primary px-5 text-xs font-semibold text-primary-foreground shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:opacity-90 sm:h-10 sm:w-auto sm:px-6 sm:justify-start"
+                className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-full bg-primary px-6 text-xs font-semibold text-primary-foreground shadow-[0_18px_34px_rgba(9,99,202,0.24)] transition-all duration-300 hover:-translate-y-0.5 hover:opacity-90 sm:w-auto sm:justify-start"
               >
                 View Projects <ArrowRight size={15} />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex h-9 w-full items-center justify-center gap-2 rounded-full border border-primary/30 bg-card px-5 text-xs font-semibold text-foreground transition-colors hover:border-primary hover:bg-primary/10 sm:h-10 sm:w-auto sm:px-6 sm:justify-start"
+                className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-full border border-primary/22 bg-white/75 px-6 text-xs font-semibold text-foreground shadow-[0_12px_28px_rgba(15,23,42,0.06)] transition-colors hover:border-primary hover:bg-primary/10 dark:bg-card/75 sm:w-auto sm:justify-start"
               >
                 Work With Me <Download size={15} />
               </Link>
@@ -63,7 +68,7 @@ export default function HomePage() {
                 href={buildWhatsAppUrl()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-9 w-full items-center justify-center gap-2 rounded-full border border-green-600/30 bg-green-600 px-5 text-xs font-semibold text-white transition-colors hover:bg-green-500 sm:h-10 sm:w-auto sm:px-6 sm:justify-start"
+                className="inline-flex h-10 w-full items-center justify-center gap-2 rounded-full border border-green-600/30 bg-green-600 px-6 text-xs font-semibold text-white shadow-[0_18px_34px_rgba(22,163,74,0.2)] transition-colors hover:bg-green-500 sm:w-auto sm:justify-start"
               >
                 Chat on WhatsApp <MessageCircle size={15} />
               </a>
@@ -83,7 +88,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="grid gap-3 pt-1 sm:flex sm:flex-wrap">
+            <div className="grid gap-3 pt-2 sm:flex sm:flex-wrap">
               {[
                 { n: "3+", label: "Years Experience" },
                 { n: "50+", label: "Completed Projects" },
@@ -92,37 +97,42 @@ export default function HomePage() {
                 <Reveal
                   key={stat.label}
                   delay={120 + index * 70}
-                  className="rounded-2xl border border-border bg-card px-4 py-2.5 shadow-sm sm:min-w-[145px]"
+                  className="rounded-[1.35rem] border border-white/75 bg-white/80 px-4 py-3 shadow-[0_16px_38px_rgba(15,23,42,0.06)] backdrop-blur dark:border-border dark:bg-card/85 sm:min-w-[155px]"
                 >
-                  <p className="text-lg font-bold text-primary">{stat.n}</p>
-                  <p className="text-[11px] text-muted-foreground">{stat.label}</p>
+                  <p className="text-xl font-black tracking-[-0.05em] text-primary">{stat.n}</p>
+                  <p className="text-[11px] font-medium text-muted-foreground">{stat.label}</p>
                 </Reveal>
               ))}
             </div>
           </Reveal>
 
           <Reveal className="flex justify-center md:justify-end" delay={120}>
-            <div className="relative">
-              <div className="absolute inset-6 rounded-[2rem] bg-primary/10 blur-2xl" />
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-card p-2.5 shadow-[0_24px_72px_rgba(22,66,120,0.14)]">
-                <div className="relative h-64 w-64 overflow-hidden rounded-[1.6rem] sm:h-[23rem] sm:w-[23rem] lg:h-[26rem] lg:w-[26rem]">
+            <div className="relative w-full max-w-[31rem]">
+              <div className="absolute inset-10 rounded-[2.5rem] bg-primary/14 blur-3xl" />
+              <div className="relative overflow-hidden rounded-[2.25rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(244,248,255,0.88))] p-3 shadow-[0_28px_80px_rgba(15,23,42,0.12)] dark:border-border dark:bg-card">
+                <div className="relative h-[22rem] overflow-hidden rounded-[1.85rem] bg-[radial-gradient(circle_at_top,rgba(10,132,255,0.12),transparent_38%),linear-gradient(180deg,rgba(247,250,255,0.96),rgba(236,243,252,0.9))] sm:h-[27rem]">
                   <Image
                     src={PROFILE_IMAGE}
                     alt="Sherif Yusuff"
                     fill
                     priority
-                    sizes="(max-width: 640px) 288px, (max-width: 1024px) 368px, 416px"
-                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 420px, 496px"
+                    className="object-contain object-bottom"
                   />
                 </div>
               </div>
-              <div className="absolute -bottom-2 -left-2 rounded-xl border border-border bg-card px-3 py-2 shadow-lg sm:-bottom-3 sm:-left-3">
-                <p className="text-[10px] text-muted-foreground">Speciality</p>
-                <p className="text-xs font-bold text-primary">Modern web products</p>
+              <div className="absolute -bottom-3 left-3 rounded-2xl border border-white/80 bg-white/88 px-4 py-3 shadow-[0_20px_40px_rgba(15,23,42,0.12)] backdrop-blur dark:border-border dark:bg-card/88 sm:-bottom-5 sm:left-5">
+                <p className="text-[10px] uppercase tracking-[0.24em] text-muted-foreground">Focus</p>
+                <p className="mt-1 text-sm font-bold text-foreground">
+                  Premium websites, WordPress systems, and mobile products
+                </p>
               </div>
-              <div className="absolute -right-2 top-5 rounded-xl border border-border bg-card px-3 py-2 shadow-lg sm:-right-3 sm:top-7">
-                <p className="text-[10px] text-muted-foreground">Status</p>
-                <p className="text-xs font-bold text-foreground">Available for work</p>
+              <div className="absolute right-3 top-5 rounded-2xl border border-white/80 bg-white/90 px-4 py-3 shadow-[0_18px_40px_rgba(15,23,42,0.1)] backdrop-blur dark:border-border dark:bg-card/90 sm:right-5 sm:top-7">
+                <p className="text-[10px] uppercase tracking-[0.24em] text-muted-foreground">Status</p>
+                <p className="mt-1 text-sm font-bold text-foreground">Available for work</p>
+              </div>
+              <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full bg-[rgba(8,38,78,0.92)] px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white shadow-[0_12px_28px_rgba(8,38,78,0.22)] sm:left-6 sm:top-6">
+                Sherif Yusuff
               </div>
             </div>
           </Reveal>
